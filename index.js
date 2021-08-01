@@ -9,10 +9,11 @@ fs.readFile('./Photography.html',function(err, html){
   
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  const msg = 'Hello Node!\n';
+ 
   res.writeHeader(200,{"Content-Type":"text/html"});
   res.write(html);
-  res.end(msg);
+  res.end();
+});
 });
 
 server.listen(port, () => {
